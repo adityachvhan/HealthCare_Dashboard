@@ -1,5 +1,11 @@
 import React from 'react';
-
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
+import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
+import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
+import TopicOutlinedIcon from '@mui/icons-material/TopicOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 const Sidebar = () => {
 
     return (
@@ -20,49 +26,59 @@ const Sidebar = () => {
                     href="#overview"
                     className="text-gray-600 hover:text-blue-600 flex items-center"
                 >
-                    <i className="fas fa-home mr-1"></i> Overview
+                    <HomeOutlinedIcon className='mr-2' /> Overview
                 </a>
+
                 <a
                     href="#patients"
                     className="text-white bg-teal-500 px-4 py-2 rounded-lg hover:bg-teal-600 flex items-center"
                 >
-                    <i className="fas fa-users mr-1"></i> Patients
+                    <PeopleAltOutlinedIcon className='mr-2' /> Patients
                 </a>
                 <a
                     href="#schedule"
                     className="text-gray-600 hover:text-blue-600 flex items-center"
                 >
-                    <i className="fas fa-calendar-alt mr-1"></i> Schedule
+                    <CalendarTodayOutlinedIcon className='mr-2' /> Schedule
                 </a>
                 <a
                     href="#message"
                     className="text-gray-600 hover:text-blue-600 flex items-center"
                 >
-                    <i className="fas fa-envelope mr-1"></i> Message
+                    <ChatBubbleOutlineOutlinedIcon className='mr-2' /> Message
                 </a>
                 <a
                     href="#transactions"
                     className="text-gray-600 hover:text-blue-600 flex items-center"
                 >
-                    <i className="fas fa-file-invoice-dollar mr-1"></i> Transactions
+                    <TopicOutlinedIcon className='mr-2' /> Transactions
                 </a>
             </div>
 
             {/* Right Section - User Info */}
             <div className="flex items-center space-x-4">
-                <div className="text-right">
-                    <p className="text-sm font-semibold">Dr. Jose Simmons</p>
-                    <p className="text-xs text-gray-500">General Practitioner</p>
+
+                <div className="flex justify-between items-center gap-5">
+                    <img
+                        src="https://fedskillstest.ct.digital/4.png"
+                        alt="User Profile"
+                        className="w-10 h-10 rounded-full"
+                    />
+                    <div className="text-right">
+                        <p className="text-lg font-semibold">Dr. Jose Simmons</p>
+                        <p className="text-xs text-gray-500">General Practitioner</p>
+                    </div>
                 </div>
-                <img
-                    src="https://via.placeholder.com/40"
-                    alt="User Profile"
-                    className="w-10 h-10 rounded-full"
-                />
-                <button className="text-gray-600 hover:text-blue-600">
-                    <i className="fas fa-cog"></i>
+
+                {/* Border Divider */}
+                <div className="border-l border-gray-300 h-10"></div>
+
+                <button className="text-gray-600  flex items-center space-x-2">
+                    <SettingsOutlinedIcon className='hover:text-blue-600'/>
+                    <MoreVertOutlinedIcon className='hover:text-blue-600'/>
                 </button>
             </div>
+
         </nav>
     );
 };

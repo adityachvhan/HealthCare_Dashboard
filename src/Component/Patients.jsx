@@ -4,7 +4,7 @@ import { patient } from "./Data";
 
 const PatientsList = () => {
     return (
-        <div className="bg-white shadow-md rounded-lg h-[765px] overflow-hidden">
+        <div className="bg-white shadow-md rounded-lg h-[800px] overflow-hidden">
             {/* Header */}
             <div className="flex justify-between items-center mb-4 p-5">
                 <h2 className="text-lg font-semibold">Patients</h2>
